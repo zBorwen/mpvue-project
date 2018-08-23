@@ -61,3 +61,4 @@ module.exports = async (ctx)=> {
 
 npm run dev 在浏览器输入 `localhost:5757/weapp/demo` 到此本地开发环境搭建完成。
 
+*ps:* 从sublime切换到webstorm，eslint报了很多错误修改了eslint配置转到webstorm开发需要注意下。

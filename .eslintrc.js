@@ -38,7 +38,8 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // allow paren-less arrow functions
-
+    'arrow-parens': 0,
+    // window开发环境换行
     "linebreak-style": [0 ,"error", "windows"]
   },
   globals: {
