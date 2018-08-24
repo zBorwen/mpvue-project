@@ -4,9 +4,13 @@
   </div>
 </template>
 <script>
+import {get} from 'common/until';
+
 export default {
-  created() {
-  },
+  async created() {
+    const data = await get('/weapp/demo');
+    console.log(data);
+  }
 };
 </script>
 
