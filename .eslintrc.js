@@ -40,7 +40,11 @@ module.exports = {
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // window开发环境换行
-    "linebreak-style": [0 ,"error", "windows"]
+    "linebreak-style": [0 ,"error", "windows"],
+    // 尾随逗号
+    "comma-dangle": ["error", "never"],
+    "object-curly-spacing": ["error", "never"],
+    "no-console": ["error", { allow: ["log"] }]
   },
   globals: {
     App: true,
