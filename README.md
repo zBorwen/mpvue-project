@@ -21,6 +21,8 @@ networkTimeout: 30000
 
 [Secret生成](https://console.cloud.tencent.com/cam/capi) 填写所需的内容其它的不用修改
 
+[常见问题](https://cloud.tencent.com/document/product/619)
+
 打开小程序开发工具第一次上传腾讯云初始化，选择模块上传全部勾选，以后上传选择智能上传即可。
 
 测试是否成功

@@ -19,7 +19,7 @@ export default {
     if (userInfo) {
       this.userInfo = userInfo;
     } else {
-      this.userInfo = {nickName: '路人甲', avatarUrl: ''};
+      this.userInfo = {nickName: '路人甲', avatarUrl: '../../../static/img/unlogin.png'};
     }
   },
   methods: {
