@@ -1,27 +1,32 @@
 <script>
-import qcloud from 'wafer2-client-sdk';
-import config from 'common/config';
-import {showSuccess} from 'common/until';
-
 export default {
   created() {
-    const user = wx.getStorageSync('userInfo');
-    if (!user) {
-      qcloud.setLoginUrl(config.loginUrl);
-      qcloud.login({
-        success(userInfo) {
-          showSuccess('登陆成功');
-          wx.setStorageSync('userInfo', userInfo);
-          // console.log('登录成功', userInfo);
-        },
-        fail(err) {
-          console.log('登录失败', err);
-        }
-      });
-    }
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+@function rpx($value) {
+  @return $value * 1rpx;
+}
+.no-data{
+  padding: 15px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #eee;
+}
+.btn{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  color: #fff;
+  font-size: rpx(32);
+  background: #00B51D;
+  border-radius: 5px;
+}
+.btn:active{
+  background: #FA5A49;
+}
 </style>
