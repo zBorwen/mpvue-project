@@ -1,5 +1,5 @@
 <template>
-  <div class="car-wrapper" @click="handelHref">
+  <a class="car-wrapper" :href="handelHref">
     <div class="thumb">
       <img :src="book.image" class="img" alt="" mode="aspectFit" @click.stop="previewImage">
     </div>
@@ -13,11 +13,11 @@
         <div class="item"><div class="eye icon"></div>{{book.count}}次</div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script type="text/ecmascript-6">
-import Star from '@/components/Star'
+import Star from '@/components/Star';
 
 export default {
   name: 'BookCar',
@@ -27,16 +27,22 @@ export default {
     }
   },
   methods: {
-    handelHref() {
-      wx.navigateTo({
-        url: '/pages/detail/main?id=' + this.book.id
-      });
-    },
+    // handelHref() {
+    //   const id = this.book.id
+    //   wx.navigateTo({
+    //     url: '/pages/detail/main?id=' + id
+    //   });
+    // },
     previewImage() {
       wx.previewImage({
         current: this.book.image,
         urls: [this.book.image]
       });
+    }
+  },
+  computed: {
+    handelHref() {
+      return  '/pages/detail/main?id=' + this.book.id;
     }
   },
   components: {

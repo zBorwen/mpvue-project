@@ -54,7 +54,7 @@ export default {
   },
   onPullDownRefresh() {
     this.getList(true);
-    this.top();
+    this.getTop();
   },
   onReachBottom() {
     if (!this.more) {
